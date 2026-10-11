@@ -55,7 +55,7 @@ For the broader behavior structure, [EntityStateMachine.cs](Scripts/Entities/Non
 
 ### Settings and the graphics menu
 
-[SettingsManager.cs](Scripts/Settings/SettingsManager.cs) applies and stores settings such as resolution, window mode, quality, VSync, frame rate limits, and pixelation. The pixelation setting changes the render texture resolution while accounting for the screen's aspect ratio, meaning the rendered image never gets stretched or squished because someone is using a 21:9 aspect ratio instead of a 16:9 aspect ratio.
+[SettingsManager.cs](Scripts/Settings/SettingsManager.cs) applies and stores settings such as resolution, window mode, quality, VSync, frame rate limits, and pixelation. The pixelation setting changes the render texture resolution while accounting for the screen's aspect ratio, meaning the rendered image doesn't get stretched or squished because someone is using a 21:9 aspect ratio instead of a 16:9 aspect ratio.
 
 The menu uses [GraphicsSetting.cs](Scripts/UI/Graphics/GraphicsSetting.cs) as a shared contract for individual settings. Each setting can report whether it has changed and apply its own value.
 
@@ -65,7 +65,7 @@ The menu uses [GraphicsSetting.cs](Scripts/UI/Graphics/GraphicsSetting.cs) as a 
 
 ### Player components
 
-I split the player functionality into separate components for movement, looking, interactions, inventory, health, animations, and audio to make individual systems easier to edit and allow me enable or disable specific behavior without disabling the entire player (e.g., disabling movement while leaving inventory and health untouched).
+I split the player functionality into separate components for movement, looking, interactions, inventory, health, animations, and audio to make individual systems easier to edit and allow me to enable or disable specific behavior without disabling the entire player (e.g., disabling movement while leaving inventory and health untouched).
 
 Useful starting points include:
 
